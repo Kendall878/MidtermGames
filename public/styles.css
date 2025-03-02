@@ -1,23 +1,142 @@
-/* Base styling, feel free to remove or alter */
-
+/* Base styling */
 body {
     background: linear-gradient(90deg, rgba(93,142,251,1) 0%, rgba(93,142,251,1) 50%, rgba(0,212,255,1) 100%);
-    height: 100%;
-    padding: 0px;
-    margin: 0px;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
     font-family: 'Lato', sans-serif;
     display: flex;
+    flex-direction: column;
     color: #F6F6F6;
 }
 
-.main-content {
+/* Header styling */
+header {
+    background-color: #443f3f;
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+}
+
+/* Navigation bar */
+nav {
+    width: 100%;
+    margin-top: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
     justify-content: center;
-    flex: 1;
-    align-items: center;
+    gap: 20px;
+}
+
+nav ul li {
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: background 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* Main content area */
+.main-content {
+    display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    text-align: center;
 }
 
 .main-content h1 {
     font-size: 50px;
+}
+
+/* Style for the game list container */
+.game-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Style for each game item */
+.game-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Hover effect */
+.game-item:hover {
+    transform: scale(1.05);
+}
+
+/* Style game titles */
+.game-item h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+/* Style game descriptions */
+.game-item p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+/* Style game links */
+.game-item a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* Hover effect on game links */
+.game-item a:hover {
+    text-decoration: underline;
+}
+
+/* Center the back button */
+.back-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+/* Style the back button */
+.back-button {
+    display: inline-block;
+    padding: 12px 18px;
+    background-color: #444;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover effect */
+.back-button:hover {
+    background-color: #666;
+    transform: scale(1.05);
 }

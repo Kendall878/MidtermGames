@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <title>Upcoming Games</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Video Game Gallery</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/top-rated">Top Rated Games</a></li>
+                <li><a href="/random">Random Game</a></li>
+                <li><a href="/upcoming">Upcoming Games</a></li>
+                <li><a href="/hidden-gems">Hidden Gems</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main-content">
+        <h1>Upcoming Games</h1>
+        <div class="game-list">
+            <% upcomingGames.forEach(game => { %>
+                <div class="game-item">
+                    <a href="/game/<%= encodeURIComponent(game.title) %>"><h2><%= game.title %></h2></a>
+                    <p><strong>Release Year:</strong> <%= game.releaseYear %></p>
+                </div>
+            <% }) %>
+        </div>
+        <div class="back-button-container">
+            <a class="back-button" href="/"> Back to Home</a>
+        </div>
+        
+    </main>
+</body>
+</html>

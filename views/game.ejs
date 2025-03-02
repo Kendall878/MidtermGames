@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <title><%= game ? game.title : "Game Not Found" %></title>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Video Game Gallery</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/top-rated">Top Rated Games</a></li>
+                <li><a href="/random">Random Game</a></li>
+                <li><a href="/upcoming">Upcoming Games</a></li>
+                <li><a href="/hidden-gems">Hidden Gems</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <% if (game) { %>
+            <div class="game-details">
+                <h1><%= game.title %></h1>
+                <p><strong>Developer:</strong> <%= game.developer %></p>
+                <p><strong>Release Year:</strong> <%= game.releaseYear %></p>
+                <p><strong>Genre:</strong> <%= game.genre %></p>
+
+                <% if (game.released) { %>
+                    <p><strong>Rating:</strong> <%= game.averageRating %></p>
+                    <p><strong>Number of Reviews:</strong> <%= game.numberOfReviews %></p>
+                <% } else { %>
+                    <p><strong>Status:</strong> Not Yet Released</p>
+                <% } %>
+
+                <p class="game-description"><%= game.description %></p>
+
+                <!-- Back Button -->
+                <div class="back-button-container">
+                    <a class="back-button" href="/">⬅ Back to Home</a>
+                </div>
+                
+            </div>
+        <% } else { %>
+            <h1>Game Not Found</h1>
+            <p>Sorry, this game does not exist.</p>
+            <a class="back-button" href="/">Back to Home</a>
+        <% } %>
+    </main>
+
+</body>
+</html>

@@ -29,15 +29,13 @@ const VideoGames = [
     { title: "Outer Wilds", description: "A mystery exploration game set in a solar system trapped in a time loop.", developer: "Mobius Digital", releaseYear: 2019, genre: Genres.ADVENTURE, averageRating: 9.3, numberOfReviews: 900, released: true },
     { title: "Disco Elysium", description: "A narrative-driven RPG where you play as a detective with unique skill-based dialogue.", developer: "ZA/UM", releaseYear: 2019, genre: Genres.RPG, averageRating: 9.6, numberOfReviews: 950, released: true },
     { title: "Starfield", description: "A space exploration RPG from the creators of Fallout and Skyrim.", developer: "Bethesda Game Studios", releaseYear: 2023, genre: Genres.RPG, averageRating: null, numberOfReviews: 0, released: false },
-    { title: "Metroid Prime 4", description: "The next installment in the Metroid Prime series.", developer: "Nintendo", releaseYear: 2025, genre: Genres.ACTION, averageRating: null, numberOfReviews: 0, released: false },
     { title: "Hollow Knight: Silksong", description: "A sequel to the acclaimed indie Metroidvania, Hollow Knight.", developer: "Team Cherry", releaseYear: 2024, genre: Genres.ADVENTURE, averageRating: null, numberOfReviews: 0, released: false },
-    { title: "Grand Theft Auto VI", description: "The next major entry in the Grand Theft Auto series.", developer: "Rockstar Games", releaseYear: 2025, genre: Genres.ACTION, averageRating: null, numberOfReviews: 0, released: false },
     { title: "Red Dead Redemption 2", description: "An open-world western action-adventure game.", developer: "Rockstar Games", releaseYear: 2018, genre: Genres.ACTION, averageRating: 9.7, numberOfReviews: 14000, released: true },
-    { title: "DOOM Eternal", description: "A fast-paced first-person shooter that rewards aggressive gameplay.", developer: "id Software", releaseYear: 2020, genre: Genres.FPS, averageRating: 9.2, numberOfReviews: 5000, released: true },
+    { title: "DOOM Eternal", description: "A fast-paced first-person shooter that rewards aggressive gameplay.", developer: "id Software", releaseYear: 2020, genre: Genres.FPS, averageRating: 9.2, numberOfReviews: 175000, released: true },
     { title: "Sid Meier's Civilization VI", description: "A turn-based strategy game where you build and expand an empire.", developer: "Firaxis Games", releaseYear: 2016, genre: Genres.STRATEGY, averageRating: 9.0, numberOfReviews: 4000, released: true },
     { title: "Bloodborne", description: "A gothic horror action RPG with intense combat and a rich world.", developer: "FromSoftware", releaseYear: 2015, genre: Genres.RPG, averageRating: 9.6, numberOfReviews: 9000, released: true },
     { title: "Super Mario Odyssey", description: "A globe-trotting 3D platformer featuring Mario and his hat companion, Cappy.", developer: "Nintendo", releaseYear: 2017, genre: Genres.ADVENTURE, averageRating: 9.7, numberOfReviews: 11000, released: true },
-    { title: "Cyberpunk 2077", description: "A futuristic RPG set in a cyberpunk city with branching stories.", developer: "CD Projekt Red", releaseYear: 2020, genre: Genres.RPG, averageRating: 8.9, numberOfReviews: 6000, released: true },
+    { title: "Cyberpunk 2077", description: "A futuristic RPG set in a cyberpunk city with branching stories.", developer: "CD Projekt Red", releaseYear: 2020, genre: Genres.RPG, averageRating: 8.9, numberOfReviews: 727000, released: true },
     { title: "God of War (2018)", description: "A third-person action-adventure featuring Kratos and his son, Atreus.", developer: "Santa Monica Studio", releaseYear: 2018, genre: Genres.ACTION, averageRating: 9.8, numberOfReviews: 12000, released: true },
     { title: "The Elder Scrolls V: Skyrim", description: "A vast open-world RPG filled with quests, dragons, and adventure.", developer: "Bethesda Game Studios", releaseYear: 2011, genre: Genres.RPG, averageRating: 9.6, numberOfReviews: 16000, released: true },
     { title: "Persona 5 Royal", description: "A stylish turn-based RPG about high school students fighting injustice.", developer: "Atlus", releaseYear: 2020, genre: Genres.RPG, averageRating: 9.7, numberOfReviews: 8000, released: true },
@@ -55,4 +53,19 @@ const VideoGames = [
     { title: "Eastward", description: "A pixel-art adventure RPG featuring a world filled with puzzles and charm.", developer: "Pixpil", releaseYear: 2021, genre: Genres.RPG, averageRating: 9.1, numberOfReviews: 600, released: true },
 ];
 
-module.exports = { Genres, VideoGames };
+const upcomingGames = [
+    { title: "Doom The Dark Ages", description: "Doom The Dark Ages is a upcoming first person shooter, the eighth main entry in the franchise.", developer: "ID Software", releaseYear: 2025, genre: Genres.ACTION, averageRating: null, numberOfReviews: 0, released: false},
+    { title: "Grand Theft Auto VI", description: "The next major entry in the Grand Theft Auto series.", developer: "Rockstar Games", releaseYear: 2025, genre: Genres.ACTION, averageRating: null, numberOfReviews: 0, released: false },
+    { title: "Metroid Prime 4", description: "The next installment in the Metroid Prime series.", developer: "Nintendo", releaseYear: 2025, genre: Genres.ACTION, averageRating: null, numberOfReviews: 0, released: false },
+    { title: "Assassins Creed Shadows", description: "Assassins Creeds next game in Japan during the time of ninjas", developer: "Ubisoft", releaseYear: 2025, genre: Genres.ACTION, averageRating: null, numberOfReviews: 0, released: false },
+    { title: "Borderlands 4", description: "A next person shooter in the borderlands franchise.", developer: "Gearbox Software", releaseYear: 2025, genre: Genres.FPS, averageRating: null, numberOfReviews: 0, released: false },
+];
+
+const hiddenGems = [
+    { title: "Slay The Princess", description: "A horror adventure game about slaying the princess.", developer: "Black Tabby Games", releaseYear: 2023, genre: Genres.ADVENTURE, averageRating: 9, numberOfReviews: 20000, released: true },
+    { title: "Far: Changing Tides", description: "An adventure puzzle traveling in the sea.", developer: "Okomotive", releaseYear: 2022, genre: Genres.ADVENTURE, averageRating: 9, numberOfReviews: 4000, released: true },
+    { title: "The Universim", description: "A god like city builder through the ages.", developer: "Crytivo", releaseYear: 2024, genre: Genres.SIMULATION, averageRating: 8, numberOfReviews: 8000, released: true },
+    { title: "A little to the left", description :"A cozy relaxing puzzle game.", developer: "Max Inferno", releaseYear: 2022, genre: Genres.PUZZLE, averageRating: 9, numberOfReviews: 11000, released: true },
+]
+
+module.exports = { Genres, VideoGames, upcomingGames, hiddenGems };

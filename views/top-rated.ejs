@@ -1,10 +1,9 @@
 <html lang="en">
 <head>
-    <title>Video Game Gallery</title>
+    <title>Top Rated Games</title>
     <link rel="stylesheet" type="text/css" href="/styles.css">
 </head>
 <body>
-
     <header>
         <h1>Video Game Gallery</h1>
         <nav>
@@ -17,27 +16,20 @@
             </ul>
         </nav>
     </header>
-
     <main class="main-content">
-        <h1>Featured Games</h1>
-    
+        <h1>Top Rated Games</h1>
         <div class="game-list">
-            <% randomGames.forEach(game => { %>
+            <% games.forEach(game => { %>
                 <div class="game-item">
-                    <a href="/game/<%= encodeURIComponent(game.title) %>">
-                        <h2><%= game.title %></h2>
-                    </a>
-                    <p><strong>Release Year:</strong> <%= game.releaseYear %></p>
-                    <% if (game.released) { %>
-                        <p><strong>Rating:</strong> <%= game.averageRating %> </p>
-                    <% } else { %>
-                        <p><strong>Status:</strong> Coming Soon</p>
-                    <% } %>
+                    <a href="/game/<%= encodeURIComponent(game.title) %>"><h2><%= game.title %></h2></a>
+                    <p><strong>Rating:</strong> <%= game.averageRating %> </p>
                 </div>
             <% }) %>
         </div>
+        <div class="back-button-container">
+            <a class="back-button" href="/"> Back to Home</a>
+        </div>
+        
     </main>
-    
-
 </body>
 </html>
